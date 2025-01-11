@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "swift",
+            "args": [
+                "build", "--product", "Basic",
+                "-c", "release",
+                "-Xswiftc", "-diagnostic-style=llvm",
+                "--swift-sdk", "DEVELOPMENT-SNAPSHOT-2025-01-06-a-wasm32-unknown-wasi",
+                "-Xswiftc", "-Xclang-linker",
+                "-Xswiftc", "-mexec-model=reactor",
+                "-Xlinker", "--export=__main_argc_argv"
+            ],
+            "env": {},
+            "cwd": "/Users/dschaefer/swift/browser/Basic",
+            "disableTaskQueue": true,
+            "showBuildStatus": "swiftStatus",
+            "group": {
+                "kind": "build",
+            },
+            "problemMatcher": [],
+            "label": "swift: Build Front End"
+        },
+        {
+            "type": "swift",
+            "args": [
+                "build", "--product", "Server",
+                "-Xswiftc", "-diagnostic-style=llvm",
+            ],
+            "env": {},
+            "cwd": "/Users/dschaefer/swift/browser/Basic",
+            "disableTaskQueue": true,
+            "showBuildStatus": "swiftStatus",
+            "group": {
+                "kind": "build",
+            },
+            "problemMatcher": [],
+            "label": "swift: Build Back End"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Basic}",
+            "name": "Debug Basic",
+            "program": "${workspaceFolder:Basic}/.build/debug/Basic",
+            "preLaunchTask": "swift: Build Debug Basic"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Basic}",
+            "name": "Release Basic",
+            "program": "${workspaceFolder:Basic}/.build/release/Basic",
+            "preLaunchTask": "swift: Build Release Basic"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Basic}",
+            "name": "Debug Server",
+            "program": "${workspaceFolder:Basic}/.build/debug/Server",
+            "preLaunchTask": "swift: Build Debug Server"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Basic}",
+            "name": "Release Server",
+            "program": "${workspaceFolder:Basic}/.build/release/Server",
+            "preLaunchTask": "swift: Build Release Server"
+        }
+    ]
+}
